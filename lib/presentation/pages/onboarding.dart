@@ -23,6 +23,7 @@ class OnboardingScreen extends StatefulWidget {
 class _OnboardingScreenState extends State<OnboardingScreen> {
   late PageController controller;
   var onControllerCurrentPageValue = 0.0;
+  OnboardingDataSource onboardingDataSource = OnboardingDataSource();
 
   @override
   void initState() {
@@ -74,86 +75,89 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: Stack(
         children: [
-          pageImageTop(onControllerCurrentPageValue.round()),
-          Expanded(
-            flex: 3,
-            child: PageView(
-              controller: controller,                           
-              children: [
-                OnBoardingWidget(
-                  pictureAssetsText: Assets.images.onBoardingFirstCenterImage,
-                  pictureText: "Take Pictures\nMake Memories",
-                  onBoardingText: "We believe your college or\nuniversity memories are\nimportant to you.",
-                  size: 300,
-                ),
-                OnBoardingWidget(
-                  pictureAssetsText: Assets.images.onBoardingSecondCenterImage,
-                  pictureText: "Save Pictures.\nSave Memories.",
-                  onBoardingText: "We believe in making &\nsaving memories.",
-                  size: 300,
-                ),
-                OnBoardingWidget(
-                  pictureAssetsText: Assets.images.onBoardingThirdCenterImage,
-                  pictureText: "Privacy Protection is\nour first Priority.",
-                  onBoardingText: "Our Priority is your privacy.\nYour images will be shared\nwithout your consent.",
-                  size: 250,
-                ),
-                OnBoardingWidget(
-                  pictureAssetsText: Assets.images.onBoardingFourthCenterImage,
-                  pictureText: "Free Unlimited\nStorage Space.",
-                  onBoardingText: "We offer free unlimited storage\nspace to save your memories.",
-                  size: 220,
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    OnboardingDataSource().getCollegroIcon(),
-                    SizedBox(
-                      height: 44.h,
-                    ),
-                    Text(
-                      "Let’s",
-                      style: AppTextStyles.body37w5.copyWith(
-                        color: AppColors.primaryButtonAndTextColor,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 39.h,
-                    ),
-                    CustomContainerWidget(
-                      color: AppColors.primaryButtonAndTextColor,
-                      style: AppTextStyles.body18w6,
-                      text: "Sign In",
-                    ),
-                    SizedBox(
-                      height: 29.h,
-                    ),
-                    CustomContainerWidget(
-                      color: AppColors.primaryButtonAndTextColor,
-                      style: AppTextStyles.body18w6,
-                      text: "Sign Out",
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          Stack(
-            alignment: Alignment.center,
+          Column(
             children: [
+              pageImageTop(onControllerCurrentPageValue.round()),
+              Expanded(
+                  flex: 3,
+                  child: PageView.builder(
+                    controller: controller,
+                    itemCount: 5,
+                    itemBuilder: (context, index) {
+                      if (index < 4) {
+                        return OnBoardingWidget(
+                          pictureAssetsText: onboardingDataSource.onBoardingData[index].pictureAssetsText,
+                          pictureText: onboardingDataSource.onBoardingData[index].pictureText,
+                          onBoardingText: onboardingDataSource.onBoardingData[index].onBoardingText,
+                          size: onboardingDataSource.onBoardingData[index].size,
+                        );
+                      }
+                      if (index == 4) {
+                        return const LetsWidget();
+                      }
+                    },
+                  )                  
+                  ),
               pageImageBottom(onControllerCurrentPageValue.round()),
-              OnBoardingIndicatorWidget(
+            ],
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding: EdgeInsets.only(bottom: 50.h),
+              child: OnBoardingIndicatorWidget(
                 controller: controller,
                 pageCount: onControllerCurrentPageValue.round(),
               ),
-            ],
+            ),
           ),
         ],
       ),
+    );
+  }
+}
+
+class LetsWidget extends StatelessWidget {
+  const LetsWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        OnboardingDataSource().getCollegroIcon(),
+        SizedBox(
+          height: 44.h,
+        ),
+        Text(
+          "Let’s",
+          style: AppTextStyles.body37w5.copyWith(
+            color: AppColors.primaryButtonAndTextColor,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        SizedBox(
+          height: 39.h,
+        ),
+        CustomContainerWidget(
+          color: AppColors.primaryButtonAndTextColor,
+          style: AppTextStyles.body18w6,
+          text: "Sign In",
+        ),
+        SizedBox(
+          height: 29.h,
+        ),
+        CustomContainerWidget(
+          color: AppColors.primaryButtonAndTextColor,
+          style: AppTextStyles.body18w6,
+          text: "Sign Out",
+        ),
+      ],
     );
   }
 }
