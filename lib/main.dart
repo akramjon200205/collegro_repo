@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:twitter_app_flutter/presentation/pages/onboarding.dart';
+import 'package:twitter_app_flutter/features/sign_in/presentation/pages/forgot_password.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: const OnboardingScreen(),
+      child: const ForgotPassword(),
     );
   }
 }
