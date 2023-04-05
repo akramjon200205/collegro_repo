@@ -5,14 +5,14 @@ import 'package:twitter_app_flutter/core/utils/custom_container_widget.dart';
 import 'package:twitter_app_flutter/features/assets/app_colors.dart';
 import 'package:twitter_app_flutter/features/assets/app_text_styles.dart';
 
-class EmailVerified extends StatefulWidget {
-  const EmailVerified({super.key});
+class EmailVerifiedSignUp extends StatefulWidget {
+  const EmailVerifiedSignUp({super.key});
 
   @override
-  State<EmailVerified> createState() => _EmailVerifiedState();
+  State<EmailVerifiedSignUp> createState() => _EmailVerifiedSignUpState();
 }
 
-class _EmailVerifiedState extends State<EmailVerified> {
+class _EmailVerifiedSignUpState extends State<EmailVerifiedSignUp> {
   final Color primaryColor = AppColors.primaryButtonAndTextColor;
   @override
   Widget build(BuildContext context) {

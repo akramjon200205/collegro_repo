@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:twitter_app_flutter/core/utils/collegro_icon.dart';
 import 'package:twitter_app_flutter/core/utils/custom_container_widget.dart';
 import 'package:twitter_app_flutter/features/assets/app_colors.dart';
 import 'package:twitter_app_flutter/features/assets/app_text_styles.dart';
 
-class EmailVerified extends StatefulWidget {
-  const EmailVerified({super.key});
+class EmailVerifiedSignIn extends StatefulWidget {
+  const EmailVerifiedSignIn({super.key});
 
   @override
-  State<EmailVerified> createState() => _EmailVerifiedState();
+  State<EmailVerifiedSignIn> createState() => _EmailVerifiedSignInState();
 }
 
-class _EmailVerifiedState extends State<EmailVerified> {
+class _EmailVerifiedSignInState extends State<EmailVerifiedSignIn> {
   final primaryColor = AppColors.primaryButtonAndTextColor;
   @override
   Widget build(BuildContext context) {

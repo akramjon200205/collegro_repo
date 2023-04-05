@@ -5,7 +5,7 @@ import 'package:twitter_app_flutter/features/assets/app_colors.dart';
 import 'package:twitter_app_flutter/features/assets/app_text_styles.dart';
 
 import '../../../../core/utils/collegro_icon.dart';
-import '../widgets/sign_in_widget.dart';
+import '../../../../core/utils/custom_text_field_widget.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
@@ -48,7 +48,7 @@ class _SignInPageState extends State<SignInPage> {
                 ),
               ),
             ),
-            SignInScreenWidget(
+            CustomTextFieldWidget(
               controller: emailController,
               text: "Email",
               textAlignment: TextAlign.start,
@@ -60,7 +60,7 @@ class _SignInPageState extends State<SignInPage> {
             SizedBox(
               height: 15.h,
             ),
-            SignInScreenWidget(
+            CustomTextFieldWidget(
               text: "Password",
               width: 325,
               textAlignment: TextAlign.start,

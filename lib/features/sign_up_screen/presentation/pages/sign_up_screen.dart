@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:twitter_app_flutter/core/utils/collegro_icon.dart';
+import 'package:twitter_app_flutter/core/utils/custom_text_field_widget.dart';
 
 import '../../../../core/utils/custom_container_widget.dart';
 import '../../../assets/app_colors.dart';
 import '../../../assets/app_text_styles.dart';
-import '../widgets/sign_up_screen_widget.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -47,14 +47,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  SignUpScreenWidget(
+                  CustomTextFieldWidget(
                     controller: firstController,
                     text: 'First Name',
                     width: 155,
                     textAlignment: TextAlign.center,
                     textPadding: EdgeInsets.zero,
                   ),
-                  SignUpScreenWidget(
+                  CustomTextFieldWidget(
                     controller: lastController,
                     text: 'Last Name',
                     width: 155,
@@ -66,7 +66,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               SizedBox(
                 height: 15.h,
               ),
-              SignUpScreenWidget(
+              CustomTextFieldWidget(
                 text: 'Email',
                 width: 325,
                 controller: emailController,
@@ -76,7 +76,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               SizedBox(
                 height: 15.h,
               ),
-              SignUpScreenWidget(
+              CustomTextFieldWidget(
                 text: 'Password',
                 width: 325,
                 controller: passwordController,

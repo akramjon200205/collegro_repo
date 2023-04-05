@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:twitter_app_flutter/core/utils/collegro_icon.dart';
+import 'package:twitter_app_flutter/core/utils/custom_text_field_widget.dart';
 
 import '../../../../core/utils/custom_container_widget.dart';
 import '../../../assets/app_colors.dart';
 import '../../../assets/app_text_styles.dart';
-import '../widgets/sign_up_screen_widget.dart';
 
-class EmailVerification extends StatefulWidget {
-  const EmailVerification({super.key});
+class EmailVerificationSignUp extends StatefulWidget {
+  const EmailVerificationSignUp({super.key});
 
   @override
-  State<EmailVerification> createState() => _EmailVerificationState();
+  State<EmailVerificationSignUp> createState() => _EmailVerificationSignUpState();
 }
 
-class _EmailVerificationState extends State<EmailVerification> {
+class _EmailVerificationSignUpState extends State<EmailVerificationSignUp> {
   late TextEditingController controller;
   final Color primaryColor = AppColors.primaryButtonAndTextColor;
   @override
@@ -57,7 +57,7 @@ class _EmailVerificationState extends State<EmailVerification> {
             SizedBox(
               height: 32.h,
             ),
-            SignUpScreenWidget(
+            CustomTextFieldWidget(
               text: "XXXX",
               width: 325,
               textAlignment: TextAlign.start,

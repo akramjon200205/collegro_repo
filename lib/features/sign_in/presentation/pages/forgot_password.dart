@@ -4,7 +4,8 @@ import 'package:twitter_app_flutter/core/utils/collegro_icon.dart';
 import 'package:twitter_app_flutter/core/utils/custom_container_widget.dart';
 import 'package:twitter_app_flutter/features/assets/app_colors.dart';
 import 'package:twitter_app_flutter/features/assets/app_text_styles.dart';
-import 'package:twitter_app_flutter/features/sign_in/presentation/widgets/sign_in_widget.dart';
+
+import '../../../../core/utils/custom_text_field_widget.dart';
 
 class ForgotPassword extends StatefulWidget {
   const ForgotPassword({super.key});
@@ -47,7 +48,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             ),
             Padding(
               padding: EdgeInsets.only(top: 35.h, bottom: 30.h),
-              child: SignInScreenWidget(
+              child: CustomTextFieldWidget(
                 text: "Email",
                 width: 325,
                 textAlignment: TextAlign.start,

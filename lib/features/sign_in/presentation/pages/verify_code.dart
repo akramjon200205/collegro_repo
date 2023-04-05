@@ -4,7 +4,8 @@ import 'package:twitter_app_flutter/core/utils/collegro_icon.dart';
 import 'package:twitter_app_flutter/core/utils/custom_container_widget.dart';
 import 'package:twitter_app_flutter/features/assets/app_colors.dart';
 import 'package:twitter_app_flutter/features/assets/app_text_styles.dart';
-import 'package:twitter_app_flutter/features/sign_in/presentation/widgets/sign_in_widget.dart';
+
+import '../../../../core/utils/custom_text_field_widget.dart';
 
 class VerifyCode extends StatefulWidget {
   const VerifyCode({super.key});
@@ -59,7 +60,7 @@ class _VerifyCodeState extends State<VerifyCode> {
             SizedBox(
               height: 32.h,
             ),
-            SignInScreenWidget(
+            CustomTextFieldWidget(
               text: "XXXX",
               width: 325,
               textAlignment: TextAlign.start,

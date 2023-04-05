@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/utils/custom_container_widget.dart';
-import '../../../assets/app_colors.dart';
-import '../../../assets/app_text_styles.dart';
+import '../../features/assets/app_colors.dart';
+import '../../features/assets/app_text_styles.dart';
 
 // ignore: must_be_immutable
-class SignInScreenWidget extends StatelessWidget {
+class CustomTextFieldWidget extends StatelessWidget {
   String text;
   double width;
   TextAlign textAlignment;
   EdgeInsets textPadding;
   final TextEditingController controller;
-  SignInScreenWidget({
+  CustomTextFieldWidget({
     Key? key,
     required this.text,
     required this.width,

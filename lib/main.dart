@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:twitter_app_flutter/features/sign_in/presentation/pages/forgot_password.dart';
+import 'package:twitter_app_flutter/features/delete_account/presentation/pages/set_new_password_page_try_sign_in.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: const ForgotPassword(),
+      child: const SetNewPasswordTrySignIn(),
     );
   }
 }

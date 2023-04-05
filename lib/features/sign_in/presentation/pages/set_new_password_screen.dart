@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:twitter_app_flutter/core/utils/collegro_icon.dart';
 import 'package:twitter_app_flutter/core/utils/custom_container_widget.dart';
+import 'package:twitter_app_flutter/core/utils/custom_text_field_widget.dart';
 import 'package:twitter_app_flutter/features/assets/app_colors.dart';
 import 'package:twitter_app_flutter/features/assets/app_text_styles.dart';
-import 'package:twitter_app_flutter/features/sign_in/presentation/widgets/sign_in_widget.dart';
 
 class SetNewPasword extends StatefulWidget {
   const SetNewPasword({super.key});
@@ -52,7 +50,7 @@ class _SetNewPaswordState extends State<SetNewPasword> {
                 ),
               ),
             ),
-            SignInScreenWidget(
+            CustomTextFieldWidget(
               text: "New Password",
               width: 325,
               textAlignment: TextAlign.start,
@@ -62,7 +60,7 @@ class _SetNewPaswordState extends State<SetNewPasword> {
             SizedBox(
               height: 15.h,
             ),
-            SignInScreenWidget(
+            CustomTextFieldWidget(
               text: "Confirm New Password",
               width: 325,
               textAlignment: TextAlign.start,
