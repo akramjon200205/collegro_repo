@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:twitter_app_flutter/core/utils/custom_container_widget.dart';
 import 'package:twitter_app_flutter/core/utils/custom_text_field_widget.dart';

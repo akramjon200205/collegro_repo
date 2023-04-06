@@ -20,6 +20,12 @@ class _Icons extends _AssetsHolder {
 
  
   String get collegroIcon => '$basePath/collegro_icon.svg';
+  String get dispatchIcon => '$basePath/dispatch_icon.svg';
+  String get plusIconAvatar => '$basePath/plus_icon_avatar.svg';
+
+  String get collegroLikeIcon => '$basePath/collegro_like_icon.svg';
+  String get collegroCommentIcon => '$basePath/collegro_comment_icon.svg';
+  String get collegroShareIcon => '$basePath/collegro_share_icon.svg';
 }
 
 class _Images extends _AssetsHolder {
@@ -40,5 +46,11 @@ class _Images extends _AssetsHolder {
   String get onBoardingSecondCenterImage => '$basePath/onboarding_second_center_image.png';
   String get onBoardingThirdCenterImage => '$basePath/onboarding_third_center_image.png';
   String get onBoardingFourthCenterImage => '$basePath/onboarding_fourth_center_image.png';
+  
+  
+  
+  String get imageAvatarFirst => '$basePath/image_avatar_first.png';
+
+
 }
 

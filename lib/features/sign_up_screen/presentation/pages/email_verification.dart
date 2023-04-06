@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:twitter_app_flutter/core/utils/collegro_icon.dart';
 import 'package:twitter_app_flutter/core/utils/custom_text_field_widget.dart';
 
-import '../../../../core/utils/custom_container_widget.dart';
 import '../../../assets/app_colors.dart';
 import '../../../assets/app_text_styles.dart';
 

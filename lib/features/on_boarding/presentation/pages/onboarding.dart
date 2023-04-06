@@ -79,24 +79,26 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             children: [
               pageImageTop(onControllerCurrentPageValue.round()),
               Expanded(
-                  flex: 3,
-                  child: PageView.builder(
-                    controller: controller,
-                    itemCount: 5,
-                    itemBuilder: (context, index) {
-                      if (index < 4) {
-                        return OnBoardingWidget(
-                          pictureAssetsText: onboardingDataSource.onBoardingData[index].pictureAssetsText,
-                          pictureText: onboardingDataSource.onBoardingData[index].pictureText,
-                          onBoardingText: onboardingDataSource.onBoardingData[index].onBoardingText,
-                          size: onboardingDataSource.onBoardingData[index].size,
-                        );
-                      }
-                      if (index == 4) {
-                        return const LetsWidget();
-                      }
-                    },
-                  )),
+                flex: 3,
+                child: PageView.builder(
+                  controller: controller,
+                  itemCount: 5,
+                  itemBuilder: (context, index) {
+                    if (index < 4) {
+                      return OnBoardingWidget(
+                        pictureAssetsText: onboardingDataSource.onBoardingData[index].pictureAssetsText,
+                        pictureText: onboardingDataSource.onBoardingData[index].pictureText,
+                        onBoardingText: onboardingDataSource.onBoardingData[index].onBoardingText,
+                        size: onboardingDataSource.onBoardingData[index].size,
+                      );
+                    }
+                    if (index == 4) {
+                      return const LetsWidget();
+                    }
+                    return null;
+                  },
+                ),
+              ),
               pageImageBottom(onControllerCurrentPageValue.round()),
             ],
           ),
@@ -151,7 +153,7 @@ class LetsWidget extends StatelessWidget {
         CustomOnTapContainer(
           text: "Sign Out",
           function: () {},
-        ),       
+        ),
       ],
     );
   }
